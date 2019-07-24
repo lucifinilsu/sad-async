@@ -1,0 +1,87 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode 10
+        versionName rootProject.ext.versionNameSadAsync
+
+        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+}
+/*allprojects {
+    repositories {
+        jcenter()
+        maven {url "https://dl.bintray.com/lucifinilsu/maven"}
+    }
+    //加上这些
+    tasks.withType(Javadoc) {
+        options{ encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+publish {
+    repoName = 'maven'
+    userOrg = 'lucifinilsu'      //bintray注册的用户名
+    groupId = 'com.sad.core.async'         //compile引用时的第1部分groupId
+    artifactId = 'sad-async'     //compile引用时的第2部分项目名
+    publishVersion = rootProject.ext.versionNameSadAsync    //compile引用时的第3部分版本号
+    desc = 'SAD异步执行环境库,更新manifest权限'
+    //website = 'https://github.com/wzgiceman/Rxbus'
+}*/
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //annotationProcessor 'com.alibaba:arouter-compiler:'+rootProject.ext.arouter_compiler_version
+    //api 'com.github.SilenceDut:SADTaskSchedulerClient:latest.release'
+   /* api ('com.alibaba:arouter-api:'+rootProject.ext.arouter_api_version){
+        exclude module: 'support-v4'
+    }*/
+    /*compile 'com.android.support:support-v4:'+ rootProject.ext.supportVersion
+    api 'com.android.support:appcompat-v7:'+rootProject.ext.supportVersion*/
+    //一些必要的依赖
+    api 'com.android.support:support-annotations:'+ rootProject.ext.supportVersion
+    //compile 'com.squareup.okhttp3:okhttp:latest.release'
+    /*compile ('com.squareup.okhttp3:okhttp-urlconnection:latest.release'){
+        //exclude module:'okhttp'
+        //exclude module:'okio'
+        exclude group: 'okhttp3'
+    }*/
+    /*testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:latest.release'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:latest.release'*/
+}
+apply from: rootProject.file('uploadbintrayJceneterScript.gradle')

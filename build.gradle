@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = 'latest.release'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:latest.release"
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        /*classpath 'com.novoda:bintray-release:0.7.0'//0.4.0
+        classpath 'org.jacoco:org.jacoco.core:0.7.5.201505241946'*/
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:latest.release'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:latest.release'
+    }
+}
+
+apply from: 'https://raw.githubusercontent.com/lucifinilsu/SmartAndroidDeveloper/master/sad-project-common.gradle'
+project.ext {
+    basicApplicationId="com.sad.async.demo"
+    versionCode = 10
+    versionName = "4.0.0"
+    versionNameSadAsync="0.1.9"
+}
+/*
+project.ext {
+    supportVersion="latest.release"//"27.+"
+    basicApplicationId = "com.sad.async.demo"
+    buildToolsVersion = "28.0.2"
+    compileSdkVersion = 28
+    minSdkVersion = 18
+    targetSdkVersion = 28
+    versionCode = 10
+    versionName = "4.0.0"
+    versionNameSadAsync="0.1.5"
+    abortOnLintError = false
+    checkLintRelease = false
+    useJack = false
+    abortOnLintError = false
+    javaVersion = JavaVersion.VERSION_1_8
+    isDebug=false
+    hermesEventbus_version="latest.release"
+    liveDataAndViewModel_version="latest.release"
+}*/
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+tasks.getByPath(":sad-core-async:javadoc").enabled = false
