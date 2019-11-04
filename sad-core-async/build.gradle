@@ -64,7 +64,7 @@ publish {
 }*/
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation 'androidx.appcompat:appcompat:latest.release'
     //annotationProcessor 'com.alibaba:arouter-compiler:'+rootProject.ext.arouter_compiler_version
     //api 'com.github.SilenceDut:SADTaskSchedulerClient:latest.release'
    /* api ('com.alibaba:arouter-api:'+rootProject.ext.arouter_api_version){
@@ -73,7 +73,7 @@ dependencies {
     /*compile 'com.android.support:support-v4:'+ rootProject.ext.supportVersion
     api 'com.android.support:appcompat-v7:'+rootProject.ext.supportVersion*/
     //一些必要的依赖
-    api 'com.android.support:support-annotations:'+ rootProject.ext.supportVersion
+    //api 'com.android.support:support-annotations:'+ rootProject.ext.supportVersion
     //compile 'com.squareup.okhttp3:okhttp:latest.release'
     /*compile ('com.squareup.okhttp3:okhttp-urlconnection:latest.release'){
         //exclude module:'okhttp'

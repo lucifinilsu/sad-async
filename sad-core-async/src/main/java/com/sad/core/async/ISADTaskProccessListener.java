@@ -9,8 +9,9 @@ public interface ISADTaskProccessListener<R> {
      * 异步线程处理任务，在非主线程执行
      * @return 处理后的结果
      * @throws InterruptedException 获取InterruptedException异常，来判断任务是否被取消
-     */
-    public R doInBackground() throws Exception;
+    public R doInBackground() throws Exception;*/
+
+
     /**
      * 异步线程处理后返回的结果，在主线程执行
      * @param result 结果

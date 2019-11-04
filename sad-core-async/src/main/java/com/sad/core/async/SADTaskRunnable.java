@@ -5,15 +5,22 @@ import android.util.Log;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
-public abstract class SADTaskRunnable<R> extends PriorityRunnable implements ISADTaskProccessListener<R> {
+public abstract class SADTaskRunnable<R> extends PriorityRunnable {
 
     private static final String TAG = "SADTaskRunnable";
     private static final String NAME_PREFIX=TAG+"_"+"workThread_";
     private AtomicBoolean mCanceledAtomic = new AtomicBoolean(false);
     private AtomicReference<Thread> mTaskThread = new AtomicReference<>();
     private String name=NAME_PREFIX+"0";
-    protected SADTaskRunnable(String name) {
+    private ISADTaskProccessListener<R> proccessListener;
+
+    public SADTaskRunnable(String name) {
         this.name=NAME_PREFIX+name;
+    }
+
+    public SADTaskRunnable(String name,ISADTaskProccessListener<R> proccessListener) {
+        this.name=NAME_PREFIX+name;
+        this.proccessListener=proccessListener;
     }
 
     public abstract R doInBackground() throws Exception;
@@ -45,7 +52,10 @@ public abstract class SADTaskRunnable<R> extends PriorityRunnable implements ISA
         SADHandlerAssistant.runOnUIThread(new Runnable() {
             @Override
             public void run() {
-                onCancel();
+                if (proccessListener!=null){
+                    proccessListener.onCancel();
+                }
+
             }
         });
     }
@@ -73,7 +83,10 @@ public abstract class SADTaskRunnable<R> extends PriorityRunnable implements ISA
                 @Override
                 public void run() {
                     if(!isCanceled()){
-                        onSuccess(result);
+                        if (proccessListener!=null){
+                            proccessListener.onSuccess(result);
+                        }
+
                     }
                 }
             });
@@ -84,7 +97,10 @@ public abstract class SADTaskRunnable<R> extends PriorityRunnable implements ISA
                 @Override
                 public void run() {
                     if(!isCanceled()){
-                        onFail(throwable);
+                        if (proccessListener!=null){
+                            proccessListener.onFail(throwable);
+                        }
+
                     }
                 }
             });
