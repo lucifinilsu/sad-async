@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mobile/mobile.iml" filepath="$PROJECT_DIR$/mobile/mobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/sad-async.iml" filepath="$PROJECT_DIR$/sad-async.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sad-core-async/sad-core-async.iml" filepath="$PROJECT_DIR$/sad-core-async/sad-core-async.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tv/tv.iml" filepath="$PROJECT_DIR$/tv/tv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobile/sad-async.mobile.iml" filepath="$PROJECT_DIR$/.idea/modules/mobile/sad-async.mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobile/sad-async.mobile.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mobile/sad-async.mobile.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobile/sad-async.mobile.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/mobile/sad-async.mobile.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.iml" filepath="$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.iml" filepath="$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.unitTest.iml" />
     </modules>
   </component>
 </project>

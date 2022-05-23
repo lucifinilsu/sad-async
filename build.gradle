@@ -3,20 +3,21 @@
 buildscript {
     ext.kotlin_version = 'latest.release'
     repositories {
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
         mavenCentral()
     }
     dependencies {
         //classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:latest.release"
-        classpath 'com.android.tools.build:gradle:3.5.1'
+        classpath 'com.android.tools.build:gradle:4.1.1'
         /*classpath 'com.novoda:bintray-release:0.7.0'//0.4.0
         classpath 'org.jacoco:org.jacoco.core:0.7.5.201505241946'*/
         //classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:latest.release'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:latest.release'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:latest.release'
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:latest.release'
     }
 }
 
@@ -38,7 +39,7 @@ project.ext {
     basicApplicationId="com.sad.async.demo"
     versionCode = 10
     versionName = "4.0.0"
-    versionNameSadAsync="0.2.0"
+    versionNameSadAsync="0.2.1"
 }
 /*
 project.ext {
@@ -63,6 +64,7 @@ project.ext {
 
 allprojects {
     repositories {
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
         mavenCentral()
@@ -72,4 +74,4 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-tasks.getByPath(":sad-core-async:javadoc").enabled = false
+//tasks.getByPath(":sad-core-async:javadoc").enabled = false
