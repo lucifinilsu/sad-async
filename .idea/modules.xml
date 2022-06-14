@@ -9,9 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.iml" filepath="$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sad-core-async/sad-async.sad-core-async.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.iml" filepath="$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/tv/sad-async.tv.unitTest.iml" />
     </modules>
   </component>
 </project>
