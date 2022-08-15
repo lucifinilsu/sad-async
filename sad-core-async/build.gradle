@@ -94,7 +94,7 @@ afterEvaluate {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:latest.release'
+    implementation 'androidx.appcompat:appcompat:'+rootProject.ext.androidxAppCompatVersion;
     //annotationProcessor 'com.alibaba:arouter-compiler:'+rootProject.ext.arouter_compiler_version
     //api 'com.github.SilenceDut:SADTaskSchedulerClient:latest.release'
    /* api ('com.alibaba:arouter-api:'+rootProject.ext.arouter_api_version){

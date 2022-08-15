@@ -95,6 +95,6 @@ dependencies {
     //compile 'com.sad.core.async:sad-async:latest.release'
     //api 'com.android.support:design:' + rootProject.ext.supportVersion
     //api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:latest.release'
+    implementation 'androidx.appcompat:appcompat:'+rootProject.ext.androidxAppCompatVersion
     /*api 'com.android.support:design:' + rootProject.ext.supportVersion*/
 }

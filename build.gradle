@@ -34,12 +34,13 @@ project.ext {
     javaVersion = JavaVersion.VERSION_1_8
     isDebug=false
 }
+apply from: rootProject.file('config.gradle')
 
 project.ext {
     basicApplicationId="com.sad.async.demo"
     versionCode = 10
-    versionName = "0.2.5"
-    versionNameSadAsync="0.2.5"
+    versionName = "0.2.6"
+    versionNameSadAsync="0.2.6"
 }
 /*
 project.ext {
