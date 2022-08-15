@@ -91,7 +91,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:latest.release'
     androidTestImplementation 'androidx.test.espresso:espresso-core:latest.release'
     api project(":sad-core-async")
-    api 'com.github.lucifinilsu:sad-basic:v0.3.4'
+    api 'com.github.lucifinilsu:sad-basic:v0.3.5'
     //compile 'com.sad.core.async:sad-async:latest.release'
     //api 'com.android.support:design:' + rootProject.ext.supportVersion
     //api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
