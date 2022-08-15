@@ -38,8 +38,8 @@ project.ext {
 project.ext {
     basicApplicationId="com.sad.async.demo"
     versionCode = 10
-    versionName = "0.2.4"
-    versionNameSadAsync="0.2.4"
+    versionName = "0.2.5"
+    versionNameSadAsync="0.2.5"
 }
 /*
 project.ext {
